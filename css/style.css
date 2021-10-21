@@ -1,0 +1,177 @@
+body{
+    font-family: 'Alegreya Sans SC', serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1em; /* test for this! Make all sizes em or rem */
+    background-image: url('../images/concrete_seamless.png');
+    background-color: #f1f1f1;
+  }
+  
+  header{
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    /*needs to have flex, but also matching example used align items
+    to center header  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .nav_links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 15%;
+   
+    font-size: large;
+    font-weight: 500;
+  }
+
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  p {
+    padding: 0 30px;
+  }
+  
+  a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 2px solid black;
+  }
+
+
+  .nav_item a{
+    display: flex;
+    color: blue;
+    padding: 10px;
+    text-decoration: underline;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav_item a:hover, a:focus{
+    color:blue;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+  .pricing{
+    display: flex;
+    min-height: 475px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /* #pricing {
+    background-color: red;
+  } */
+
+  .card {
+    flex-basis: 450px;
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+/* only target the header in .card VV */
+  .card header{
+    background: #288080;
+    border: #45adad 2px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 7px 7px 0 0;
+
+    }
+
+  .card > ul{
+   
+    list-style: none;
+    padding-left: 5px;
+  }
+  
+  .card > ul li {
+    width: 90%;
+    margin: 20px auto;
+    
+  }
+
+.card button{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    margin-left: 5%;
+    border-radius: 7px;
+    background: #288080;
+    color: white;
+    font-size: 1em;
+  }
+  
+  .card h3{
+    font-size: 4em;
+    color: white;
+    text-align: center;
+  }
+  
+  .card_big{
+    -webkit-transform: initial;
+            transform: initial;
+  }
+
+  .gallery{
+    display: flex;
+    min-height: 600px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 850px){
+    .card_big{
+        -webkit-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+        z-index: -99;
+  }
+}
+  
