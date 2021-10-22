@@ -1,4 +1,6 @@
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Alegreya Sans SC', serif;
     font-size: 1em; 
     background-image: url('../images/concrete_seamless.png');
@@ -6,22 +8,27 @@ body{
 
   }
   header{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative;
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
+    justify-content:center;
+    align-items: center; */
   }
 
   .nav_links {
     display: flex;
+    flex-direction: column;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     line-height: 15%;
     font-size: large;
-    font-weight: 500;
+    font-weight: 500; */
   }
 
   .card header{
@@ -33,16 +40,19 @@ body{
     }
 
   .card {
+    flex-basis: 450px;;
+    /* flex-basis: 450px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+
+    }
+  
+  .pricing {
     flex-basis: 450px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    }
-  
-  .pricing {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -67,26 +77,50 @@ body{
         transform: scaleY(1.1);
         z-index: -99;
     }
+    .card {
+      flex-basis: 250px;
+    }
     header {
-      justify-content: left;
+      flex-direction: row;
+      justify-content: space-between;
   } 
      .nav_links{
       flex-direction: row;
-      justify-content:right;
-      align-content: right;
+      
   }
- 
- 
- 
- 
- 
+
+  @media print {
+    .card{
+      flex-basis: 250px;
+    }
+      header{
+        align-items: center;
       }
-/* 
+      footer{
+        display: block;
+      }
+    .pricing{
+      align-items: flex-start;
+    }
+      body{
+        background-image: none;
+      }
+      .gallery{
+        display: none;
+      }
+      #gallery {
+        display: none;
+      }
+
+    
+  }
+      }
+
  
 
 
 
-@-webkit-keyframes logo_name{
+@keyframes logo_name{
  from{width: 50px;}
    to{width: 425px;}
    start{opacity: 0;}
@@ -100,5 +134,7 @@ body{
 
 
 @media screen and (prefers-reduced-motion: reduce){
-#logo_name
-} */
+#logo_name{
+  animation: none;
+}
+}
