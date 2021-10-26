@@ -1,5 +1,6 @@
 /* MOBILE FIRST */
 
+
 body {
   font-family: 'Alegreya Sans SC', serif;
   font-size: 1.5rem;
@@ -10,153 +11,178 @@ body {
 /* # 3 ^^ */
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav_links {
-    display: flex;
-    font-size: 1rem;
-    flex-direction: column;
+  color: #50c7c7;
+  display: flex;
+  font-size: 1rem;
+  flex-direction: column;
 }
 
 /* # 4 ^^ */
 
 
 .nav_links a:visited {
-    color: #50c7c7;
-    text-decoration: none;
+  color: #50c7c7;
+  text-decoration: none;
 }
 
 /* #5 ^^ */
 
 .pricing {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    flex-basis: 450px;
+  flex-basis: 450px;
 }
 
 /* # 6 ^ */
 
 .card header {
-    background: #288088;
-    border: solid 2px #45ADAD;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius:7px 7px 0 0 ;
+  background: #288088;
+  border: solid 2px #45ADAD;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius:7px 7px 0 0 ;
 }
 
 /* # 7 ^^ */
 
 .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 .gallery img {
-    border: 10px solid #50C7C7;
-    margin: 10px;
-    width: 300px;
+  border: 10px solid #50C7C7;
+  margin: 10px;
+  width: 300px;
 }
 
 @keyframes logo_name{
-    from{
-      width: 50px;
-      opacity: 0;
-    }
-  
-    to{
-      width: 425px;
-      opacity: 1;
-    }
+  from{
+    width: 50px;
+    opacity: 0;
   }
   
-  #logo {
-    animation-name: logo_name;
-    animation-duration: 5s;
+  to{
+    width: 425px;
+    opacity: 1;
+  }
+}
+  
+#logo {
+  animation-name: logo_name;
+  animation-duration: 5s;
 }
 
 
 @media screen and (min-width: 850px){
-    header {
-        top: 0;
-        position: sticky;
-        flex-direction: row;
-        justify-content: space-between;
-        overflow: visible;
-    }
+  header {
+    top: 0;
+    position: sticky;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: visible;
+  }
 
-    .nav_links {
-        flex-direction: row;
-        font-size: 1.5rem;
-    }
+  .nav_links {
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
 
-    .card {
-        z-index: -99;
-        overflow: hidden;
-        flex-basis: 250px;
-    }
+  .card {
+    z-index: -99;
+    overflow: hidden;
+    flex-basis: 250px;
+  }
 
-    .pricing {
-        overflow: hidden;
-    }
+  .pricing {
+    overflow: hidden;
+  }
 
 }
 /* GO TO EASE OF ACCESS and DISPLAY */
 /* If ease of access- animation turned off then it wont play
 animation, if it is turned on then it will play the animation  */
 @media screen and (prefers-reduced-motion: reduce){
-    #logo{
-        animation: none;
-    }
+  #logo{
+    animation: none;
+  }
 
 }
 
 
-@media print {
-    body {
-        background-image: none;
-        font-family: serif;
-    }
-    h1,
-    h2{
-        font-size: 1em;
-    }
-    header 
+/* @media print { */
+/* greater than 1200 pixel work on it for now and then add the media print */
+@media screen and (min-width: 1200px){
+  body {
+    background-image: none;
+    font-family: serif;
+  }
+  header {
+    position: relative;
+    top: 0;
+    display: block;
+  }
+  h1 {
+    line-height: inherit;
+  }
+
+  img#logo {
+    display: block;
+    margin-right: auto;
+    margin-right: auto;
+  }
+
    
-    
+  .pricing {
+    flex-direction: row; 
+    /* flex-wrap: nowrap; */
+    align-items:flex-end;
+    overflow: visible;
+  }
 
-    .pricing {
-        font-size: 1em;
-        flex-direction: row; 
-        flex-wrap: nowrap;
-        align-items:flex-end;
-    }
+  .card {
+    border: 2px solid #45ADDD;
+    flex-basis: 250px; 
+  }
+  
+  .gallery,
+  #gallery {
+    display: none;
+  }
 
-    .card {
-        border: 2px solid #45ADDD;
-        flex-basis: 250px; 
-        width: 100%;
-        height: auto;
-    }
-    .gallery,
-    #gallery {
-        display: none;
-    }
-    .nav_links{
-        flex-direction: row;
-    }
+  }
+  ul .nav_links{
+    justify-content: space-evenly;
 
-    footer{
-        position: relative;
-    }
+  }
+
+  footer{
+    position: block;
+  }
+
+  header h3 ul li a:before{
+    content: '&#128077';
+    content: '&#x1F44D';
+  }
 }
+
+/* need to work on the thumbs up and also mess around with the pricing to make sure we can get all the items on the same level or I
+can add some padding/margin to the big card to get it to level out with the other ones. */
+
+/* Thumbs up entity HTML  */
+/* &#128077;
+&#x1F44D; */
