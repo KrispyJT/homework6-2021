@@ -186,3 +186,66 @@ can add some padding/margin to the big card to get it to level out with the othe
 /* Thumbs up entity HTML  */
 /* &#128077;
 &#x1F44D; */
+
+
+
+____________________________________________________
+
+@media print {
+    body {
+      background-image: none;
+      font-family: serif;
+    }
+
+    /* h1 {
+      line-height: inherit;
+    } */
+  
+    header > img#logo {
+        display: block;
+        margin-right: auto;
+        margin-right: auto;
+    }
+  
+     
+    .pricing {
+      flex-direction: row; 
+      flex-wrap: nowrap;
+      align-items:flex-end;
+      overflow: visible;
+    }
+  
+    .card {
+      border: 2px solid #45ADDD;
+      flex-basis: 250px; 
+    }
+    
+    .gallery,
+    #gallery {
+      display: none;
+
+  
+    }
+
+
+    ul.nav_links{
+        justify-content: space-evenly;
+    }
+  
+    footer{
+      position: block;
+    }
+}
+  
+    /* header h3 ul li a:before{
+      content: '&#128077';
+      content: '&#x1F44D';
+    } */
+
+  
+  /* need to work on the thumbs up and also mess around with the pricing to make sure we can get all the items on the same level or I
+  can add some padding/margin to the big card to get it to level out with the other ones. */
+  
+  /* Thumbs up entity HTML  */
+  /* &#128077;
+  &#x1F44D; */
