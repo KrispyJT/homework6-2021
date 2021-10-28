@@ -88,7 +88,7 @@ header {
 @media screen and (min-width: 850px){
     header {
         top: 0;
-        /* margin: 0; */
+        left: 0;
         position: sticky;
         flex-direction: row;
         justify-content: space-between;
@@ -139,9 +139,10 @@ animation, if it is turned on then it will play the animation  */
     }
 
 
-    /* nav {
-      width: 100;
-    } */
+    nav {
+      width: 100%;
+    } 
+
     header img#logo {
       display: block;
       margin-left: auto;
@@ -196,12 +197,6 @@ animation, if it is turned on then it will play the animation  */
     footer{
       position: block;
     }
-}
-  
-    /* header h3 ul li a:before{
-      content: '&#128077';
-      content: '&#x1F44D';
-    } */
 
   
   /* need to work on the thumbs up and also mess around with the pricing to make sure we can get all the items on the same level or I
